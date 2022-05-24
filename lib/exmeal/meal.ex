@@ -1,17 +1,18 @@
 defmodule Exmeal.Meal do
   use Ecto.Schema
+
   import Ecto.Changeset
 
   @primary_key {:id, :binary_id, autogenerate: true}
 
-  @required_params [:description, :date, :calories]
+  @required_params [:description, :calories, :date]
 
-  @derive {Jason.Encoder, only: @required_params ++ [:id]}
+  @derive {Jason.Encoder, only: [:id, :description, :calories, :date]}
 
   schema "meals" do
-    field :description, :string
-    field :date, :naive_datetime
-    field :calories, :integer
+    field(:description, :string)
+    field(:calories, :integer)
+    field(:date, :date)
 
     timestamps()
   end
@@ -20,6 +21,5 @@ defmodule Exmeal.Meal do
     struct
     |> cast(params, @required_params)
     |> validate_required(@required_params)
-    |> validate_length(:calories, greater_than: 0)
   end
 end

@@ -1,5 +1,16 @@
 defmodule Exmeal.Meals.Update do
-  def call() do
-    # TODO
+  alias Exmeal.{Meal, Repo, Error}
+
+  def call(%{"id" => id} = params) do
+    case Repo.get(Meal, id) do
+      nil -> {:error, Error.meal_not_found()}
+      meal -> do_update(meal, params)
+    end
+  end
+
+  defp do_update(meal, params) do
+    meal
+    |> Meal.changeset(params)
+    |> Repo.update()
   end
 end

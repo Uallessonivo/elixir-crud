@@ -1,5 +1,10 @@
 defmodule Exmeal.Meals.Get do
-  def call() do
-    # TODO
+  alias Exmeal.{Meal, Repo, Error}
+
+  def by_id(id) do
+    case Repo.get(Meal, id) do
+      nil -> {:error, Error.meal_not_found()}
+      meal -> {:ok, meal}
+    end
   end
 end
