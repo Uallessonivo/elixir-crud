@@ -67,11 +67,11 @@
       "test": "test Update Meal when a valid id is given, returns the meal"
     },
     {
-      "describe": "update/2",
+      "describe": "create/2",
       "file": "c:/Users/uallesson.nunes/Documents/GitHub/elixir-crud/test/exmeal_web/controller/meals_controller_test.exs",
-      "line": 71,
+      "line": 5,
       "module": "Elixir.Exmeal.MealsControllerTest",
-      "test": "test update/2 when id exist, update the meal"
+      "test": "test create/2 when all params are valid, creates a meal"
     },
     {
       "describe": "get/2",
@@ -81,11 +81,18 @@
       "test": "test get/2 when id not exist, return an error"
     },
     {
-      "describe": "create/2",
+      "describe": "delete/2",
       "file": "c:/Users/uallesson.nunes/Documents/GitHub/elixir-crud/test/exmeal_web/controller/meals_controller_test.exs",
-      "line": 24,
+      "line": 41,
       "module": "Elixir.Exmeal.MealsControllerTest",
-      "test": "test create/2 when there are invalid params, returns an error"
+      "test": "test delete/2 when id exist, delete the meal"
+    },
+    {
+      "describe": "update/2",
+      "file": "c:/Users/uallesson.nunes/Documents/GitHub/elixir-crud/test/exmeal_web/controller/meals_controller_test.exs",
+      "line": 93,
+      "module": "Elixir.Exmeal.MealsControllerTest",
+      "test": "test update/2 when not exist id, return an error"
     },
     {
       "describe": "get/2",
@@ -97,9 +104,16 @@
     {
       "describe": "create/2",
       "file": "c:/Users/uallesson.nunes/Documents/GitHub/elixir-crud/test/exmeal_web/controller/meals_controller_test.exs",
-      "line": 5,
+      "line": 24,
       "module": "Elixir.Exmeal.MealsControllerTest",
-      "test": "test create/2 when all params are valid, creates a meal"
+      "test": "test create/2 when there are invalid params, returns an error"
+    },
+    {
+      "describe": "update/2",
+      "file": "c:/Users/uallesson.nunes/Documents/GitHub/elixir-crud/test/exmeal_web/controller/meals_controller_test.exs",
+      "line": 71,
+      "module": "Elixir.Exmeal.MealsControllerTest",
+      "test": "test update/2 when id exist, update the meal"
     },
     {
       "describe": "delete/2",
@@ -107,20 +121,6 @@
       "line": 56,
       "module": "Elixir.Exmeal.MealsControllerTest",
       "test": "test delete/2 when id not exist, return an error"
-    },
-    {
-      "describe": "update/2",
-      "file": "c:/Users/uallesson.nunes/Documents/GitHub/elixir-crud/test/exmeal_web/controller/meals_controller_test.exs",
-      "line": 93,
-      "module": "Elixir.Exmeal.MealsControllerTest",
-      "test": "test update/2 when not exist id, return an error"
-    },
-    {
-      "describe": "delete/2",
-      "file": "c:/Users/uallesson.nunes/Documents/GitHub/elixir-crud/test/exmeal_web/controller/meals_controller_test.exs",
-      "line": 41,
-      "module": "Elixir.Exmeal.MealsControllerTest",
-      "test": "test delete/2 when id exist, delete the meal"
     },
     {
       "describe": null,
